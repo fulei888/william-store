@@ -7,36 +7,40 @@ import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 import uploadRoute from './routes/uploadRoute';
 import path from 'path';
+import dotenv from 'dotenv';
 
 
 
-const mongodbUrl = config.MONGODB_URL;
-mongoose.connect(mongodbUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true
-}).catch(error => console.log(error.reason));
-
+dotenv.config();
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(bodyParser.json());
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 app.use('/api/uploads', uploadRoute);
-app.use("/api/users", userRoute);
-app.use("/api/products", productRoute);
-app.use("/api/orders", orderRoute);
-app.get("/api/config/paypal", (req, res) => {
-  res.send(config.PAYPAL_CLIENT_ID);
-})
+app.use('/api/users', userRoute);
+app.use('/api/products', productRoute);
+app.use('/api/orders', orderRoute);
+app.get('/api/config/paypal', (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
+});
 const __dirname = path.resolve();
-app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 app.use(express.static(path.join(__dirname, '/frontend/build')));
-app.get('*', (req, res) => 
+app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
 
 app.use((err, req, res, next) => {
-  res.status(500).send({message: err.message})
+  res.status(500).send({ message: err.message });
 });
+
 const port = process.env.PORT || 5000;
-app.listen(5000, () => { console.log("Server started at http://localhost:port") });
+app.listen(port, () => {
+  console.log(`Serve at http://localhost:${port}`);
+});
