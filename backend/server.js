@@ -1,7 +1,6 @@
-import express from 'express';
-import config from './config';
+
 import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
+import express from 'express';
 import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
