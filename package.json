@@ -4,6 +4,7 @@
   "description": "Demo : https://amazonaapp.herokuapp.com/",
   "main": "index.js",
   "scripts": {
+    "start:dev":"nodemon --watch",
     "start": "nodemon --watch backend --exec babel-node backend/server.js",
     "build": "cd frontend && npm install && npm run build",
     "heroku-postbuild-x": "npm run build && cd frontend && npm install && npm run build"
@@ -11,12 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.786.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.4",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
