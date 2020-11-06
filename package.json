@@ -4,10 +4,8 @@
   "description": "Demo : https://amazonaapp.herokuapp.com/",
   "main": "index.js",
   "scripts": {
-    "start:dev":"nodemon --watch",
-    "start": "node --experimental-modules backend/server.js",
     "build": "cd frontend && npm install && npm run build",
-    "heroku-postbuild-x": "npm run build && cd frontend && npm install && npm run build"
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "author": "",
   "license": "ISC",
