@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:dev":"nodemon --watch",
-    "start": "nodemon --watch backend --exec babel-node backend/server.js",
+    "start": "node --experimental-modules backend/server.js",
     "build": "cd frontend && npm install && npm run build",
-    "heroku-postbuild-x": "npm run build && cd frontend && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
