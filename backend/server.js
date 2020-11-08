@@ -1,4 +1,3 @@
-
 import mongoose from 'mongoose';
 import express from 'express';
 import userRoute from './routes/userRoute';
