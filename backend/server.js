@@ -1,13 +1,11 @@
-import mongoose from 'mongoose';
 import express from 'express';
+import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 import uploadRoute from './routes/uploadRoute';
 import path from 'path';
 import dotenv from 'dotenv';
-
-
 
 dotenv.config();
 
