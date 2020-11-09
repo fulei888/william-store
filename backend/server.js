@@ -1,12 +1,13 @@
-import express from 'express';
-import mongoose from 'mongoose';
+const express = require('express');
+const mongoose = require('mongoose');
 import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 import uploadRoute from './routes/uploadRoute';
 import path from 'path';
 import dotenv from 'dotenv';
-
+const path = require('path');
+const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
