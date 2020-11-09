@@ -1,9 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoute = require('./routes/userRoute');
-const mongoose = require('./routes/productRoute');
-const mongoose = require('./routes/orderRoute');
-const mongoose = require('./routes/uploadRoute');
+const productRoute = require('./routes/productRoute');
+const orderRoute = require('./routes/orderRoute');
+const uploadRoute = require('./routes/uploadRoute');
 
 const path = require('path');
 
