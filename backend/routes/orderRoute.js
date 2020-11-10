@@ -68,5 +68,5 @@ router.put("/:id/pay", isAuth, async (req, res) => {
     res.status(404).send({ message: 'Order not found.' })
   }
 });
-
+module.exports = router;
 export default router;

@@ -80,5 +80,5 @@ router.get("/createadmin", async (req, res) => {
     res.send({ msg: error.message });
   }
 });
-
+module.exports = router;
 export default router;
