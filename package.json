@@ -1,10 +1,11 @@
 {
   "name": "amazona-video-05-sidebar",
+  "type": "module",
   "version": "1.0.0",
   "description": "Demo : https://amazonaapp.herokuapp.com/",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec babel-node backend/server.js",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
     "build": "cd frontend && npm install && npm run build",
     "heroku-postbuild-x": "npm run build && cd frontend && npm install && npm run build"
   },
