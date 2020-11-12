@@ -1,6 +1,6 @@
 {
   "name": "amazona-video-05-sidebar",
- 
+  
   "version": "1.0.0",
   "description": "Demo : https://amazonaapp.herokuapp.com/",
   "main": "index.js",
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.786.0",
+    "babel-register": "^6.26.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

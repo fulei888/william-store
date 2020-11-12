@@ -6,6 +6,10 @@
 // const uploadRoute = require('./routes/uploadRoute');
 // const path = require('path');
 // const dotenv = require('dotenv');
+
+require('babel-register')({
+  "presets": ["es2015"]
+});
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
