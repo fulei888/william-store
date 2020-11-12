@@ -1,6 +1,6 @@
 import express from 'express';
-import User from '../models/userModel';
-import { getToken, isAuth } from '../util';
+import User from '../models/userModel.js';
+import { getToken, isAuth } from '../util.js';
 
 const router = express.Router();
 
@@ -80,5 +80,5 @@ router.get("/createadmin", async (req, res) => {
     res.send({ msg: error.message });
   }
 });
-module.exports = router;
+
 export default router;
