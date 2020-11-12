@@ -170,7 +170,7 @@ router.get("/createadmin", /*#__PURE__*/function () {
             user = new _userModel["default"]({
               name: 'Basir',
               email: 'william@gmail.com',
-              password: '1234',
+              password: 'password',
               isAdmin: true
             });
             _context4.next = 4;
