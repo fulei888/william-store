@@ -13,12 +13,12 @@ function HomeScreen(props) {
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(listProducts(category));
+    dispatch(listProducts(category, searchKeyword,sortOrder));
 
     return () => {
       //
     };
-  }, [category]);
+  }, [category, sortOrder]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -26,7 +26,7 @@ function HomeScreen(props) {
   };
   const sortHandler = (e) => {
     setSortOrder(e.target.value);
-    dispatch(listProducts(category, searchKeyword, sortOrder));
+   // dispatch(listProducts(category, searchKeyword, sortOrder));
   };
 
   return (
