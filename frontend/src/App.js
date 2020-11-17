@@ -5,7 +5,6 @@ import ProductScreen from './Screens/ProductScreen';
 import {BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 import CartScreen from './Screens/CartScreen';
 import SigninScreen from './Screens/SigninScreen';
-import { userSigninReducer } from './reducers/userReducers';
 import { useSelector } from 'react-redux';
 import RegisterScreen from './Screens/RegisterScreen';
 import ProductsScreen from './Screens/ProductsScreen';
