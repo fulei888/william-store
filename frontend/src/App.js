@@ -34,7 +34,7 @@ function App() {
         <button onClick={openMenu}>
           &#9776;
         </button>
-        <Link to="/">amazona</Link>
+        <Link to="/">William's Store</Link>
       </div>
       <div className="header-links">
         <a href="cart.html">Cart</a>
@@ -48,6 +48,8 @@ function App() {
             <ul className="dropdown-content">
               <li>
                 <Link to ="/orders">Orders</Link>
+                </li>
+                <li>
                 <Link to ="/products">Products</Link>
               </li>
             </ul>
@@ -83,7 +85,7 @@ function App() {
         <Route path="/product/:id" component={ProductScreen} />
         <Route path="/cart/:id?" component = {CartScreen} />
         <Route path="/products" component={ProductsScreen} />
-        <Route path="category/:id" component={HomeScreen} />
+        <Route path="/category/:id" component={HomeScreen} />
         <Route path="/" exact component={HomeScreen} />  
         </Switch>
         

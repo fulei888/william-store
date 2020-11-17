@@ -434,7 +434,9 @@ tbody>tr:nth-child(odd){
 .dropdown:hover .dropdown-content{
   display: block;
 }
-
+.dropdown-content li:first-child {
+  padding-bottom: 1rem;
+}
 /* filter */
 .filter{
   display: flex;
